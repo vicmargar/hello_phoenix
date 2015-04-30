@@ -20,6 +20,8 @@ defmodule HelloPhoenix.Router do
     get "/hello/:messenger", HelloController, :show
   end
 
+  resources "/cards", HelloPhoenix.CardController
+
   socket "/ws", HelloPhoenix do
     channel "rooms:*", RoomChannel
   end

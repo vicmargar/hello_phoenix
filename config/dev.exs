@@ -29,6 +29,6 @@ config :logger, :console, format: "[$level] $message\n"
 # Configure your database
 config :hello_phoenix, HelloPhoenix.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "victor",
+  password: "",
   database: "hello_phoenix_dev"
