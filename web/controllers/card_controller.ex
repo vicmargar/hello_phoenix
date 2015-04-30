@@ -23,7 +23,7 @@ defmodule HelloPhoenix.CardController do
       Repo.insert(changeset)
 
       conn
-      # |> put_flash(:info, "Card created successfully.")
+      |> put_flash(:info, "Card created successfully.")
       |> redirect(to: card_path(conn, :index))
     else
       render conn, "new.html", changeset: changeset
@@ -49,7 +49,7 @@ defmodule HelloPhoenix.CardController do
       Repo.update(changeset)
 
       conn
-      # |> put_flash(:info, "Card updated successfully.")
+      |> put_flash(:info, "Card updated successfully.")
       |> redirect(to: card_path(conn, :index))
     else
       render conn, "edit.html", card: card, changeset: changeset
@@ -61,7 +61,7 @@ defmodule HelloPhoenix.CardController do
     Repo.delete(card)
 
     conn
-    # |> put_flash(:info, "Card deleted successfully.")
+    |> put_flash(:info, "Card deleted successfully.")
     |> redirect(to: card_path(conn, :index))
   end
 end
