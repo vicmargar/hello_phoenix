@@ -18,9 +18,10 @@ defmodule HelloPhoenix.Router do
     get "/", PageController, :index
     get "/hello", HelloController, :index
     get "/hello/:messenger", HelloController, :show
+
+    resources "/cards", CardController
   end
 
-  resources "/cards", HelloPhoenix.CardController
 
   socket "/ws", HelloPhoenix do
     channel "rooms:*", RoomChannel
